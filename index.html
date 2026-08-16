@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>한전 NDIS데이터관리원 필기 대비</title>
+<meta name="description" content="한국전력공사 2026년도 NDIS데이터관리원 필기전형 대비 예상문제 111문항">
+<meta name="theme-color" content="#08141C">
+<style>
+:root{--ink:#08141C;--panel:#0E212D;--line:#1C4459;--line2:#123141;--cy:#4FD1E8;
+--cy-dim:#2C8FA6;--amber:#F2B441;--ok:#5FD39A;--tx:#DCEAF0;--tx-dim:#7EA0B0;
+--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+--sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--ink);color:var(--tx);font-family:var(--sans);line-height:1.62;
+background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+background-size:28px 28px;background-position:-1px -1px}
+.sheet{max-width:760px;margin:0 auto;padding:14px}
+.frame{border:1px solid var(--line);background:rgba(8,20,28,.95);position:relative}
+.frame::before,.frame::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--cy-dim)}
+.frame::before{top:6px;left:6px;border-right:0;border-bottom:0}
+.frame::after{bottom:6px;right:6px;border-left:0;border-top:0}
+.tb{display:grid;grid-template-columns:1fr auto;gap:10px;padding:20px 16px 16px;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 11px/1.4 var(--mono);letter-spacing:.22em;color:var(--cy-dim)}
+h1{margin:7px 0 3px;font-size:22px;letter-spacing:-.02em}
+.sub{font:500 12px/1.5 var(--mono);color:var(--tx-dim)}
+.dday{text-align:right;font:700 36px/1 var(--mono);color:var(--amber)}
+.dday span{display:block;font:600 10px/1.7 var(--mono);letter-spacing:.18em;color:var(--tx-dim)}
+.specs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.specs div{padding:10px;border-right:1px solid var(--line2);font:500 11px/1.5 var(--mono);color:var(--tx-dim)}
+.specs div:last-child{border-right:0}
+.specs b{display:block;font:700 14px/1.4 var(--sans);color:var(--tx)}
+.pad{padding:16px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+a.card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);
+background:var(--panel);padding:18px 16px;transition:.15s;position:relative}
+a.card:hover{border-color:var(--cy);background:rgba(79,209,232,.06)}
+a.card .n{font:700 11px var(--mono);letter-spacing:.16em;color:var(--cy-dim)}
+a.card h2{margin:7px 0 5px;font-size:17px;color:var(--cy);letter-spacing:-.01em}
+a.card p{margin:0;font-size:13px;color:var(--tx-dim)}
+a.card .go{display:inline-block;margin-top:12px;font:700 11px var(--mono);color:var(--amber);letter-spacing:.1em}
+.split{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.split div{border:1px solid var(--line2);padding:10px;text-align:center}
+.split b{display:block;font:700 19px var(--mono);color:var(--cy)}
+.split span{font-size:11px;color:var(--tx-dim)}
+h3{font-size:14px;margin:26px 0 8px;color:var(--amber);border-bottom:1px solid var(--line2);padding-bottom:6px}
+ul{margin:0;padding-left:19px}
+li{font-size:13.5px;margin-bottom:5px;color:var(--tx-dim)}
+li b{color:var(--tx)}
+.note{font-size:12.5px;color:var(--tx-dim);border:1px dashed var(--line);padding:12px 14px;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:13px 16px;font:500 11px var(--mono);color:var(--tx-dim);
+display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+@media(max-width:560px){
+ .cards{grid-template-columns:1fr}
+ .specs{grid-template-columns:repeat(2,1fr)}
+ .specs div:nth-child(2){border-right:0}
+ .split{grid-template-columns:repeat(2,1fr)}
+ .dday{font-size:28px}h1{font-size:19px}
+}
+</style>
+<div class="sheet"><div class="frame">
+ <div class="tb">
+  <div>
+   <div class="eyebrow">KEPCO · 2026 NDIS DATA MANAGER</div>
+   <h1>NDIS데이터관리원 필기 대비</h1>
+   <div class="sub">한국전력공사 2차전형 · 예상문제 111문항</div>
+  </div>
+  <div class="dday" id="dd"><span>D-</span>–</div>
+ </div>
+
+ <div class="specs">
+  <div>필기시험<b>8.20(목)</b>서울 · 5배수</div>
+  <div>직무능력<b>40문항 / 80점</b>도면·PC·전기</div>
+  <div>상식<b>10문항 / 20점</b>한국사·전력·회사</div>
+  <div>합격발표<b>8.25(화)</b>면접 9.1(화)</div>
+ </div>
+
+ <div class="pad">
+  <div class="cards">
+   <a class="card" href="quiz.html">
+    <div class="n">01 · PRACTICE</div>
+    <h2>문제 풀기</h2>
+    <p>과목별로 풀고 즉시 채점. 틀린 문제만 다시 풀기와 요약 시트, 4일 학습계획이 들어 있습니다.</p>
+    <span class="go">풀러 가기 →</span>
+   </a>
+   <a class="card" href="answers.html">
+    <div class="n">02 · ANSWER KEY</div>
+    <h2>정답 및 상세해설</h2>
+    <p>111문항 전문을 정답과 함께 통독. 비전공자 기준으로 용어 뜻부터 예시·계산까지 풀어 썼습니다.</p>
+    <span class="go">읽으러 가기 →</span>
+   </a>
+  </div>
+
+  <div class="split">
+   <div><b>35</b><span>도면</span></div>
+   <div><b>28</b><span>전기</span></div>
+   <div><b>22</b><span>PC</span></div>
+   <div><b>26</b><span>상식</span></div>
+  </div>
+
+  <h3>공부 순서</h3>
+  <ul>
+   <li><b>해설집으로 1회독</b> — 아는 것과 모르는 것을 먼저 가릅니다.</li>
+   <li><b>전기부터 집중</b> — 43번(선로손실 I²R)이 모든 것의 뿌리입니다. 이걸 잡으면 승압·역률·전선 굵기가 한 줄기로 연결됩니다.</li>
+   <li><b>PC는 기능사 수준</b>이 기준선. 기사 필기는 3과목(데이터베이스)과 네트워크·보안 기초만.</li>
+   <li><b>도면은 숫자만</b> — 원점 가산 600,000/200,000, UTM-K 0.9996, 등고선 간격, 도곽 40×30.</li>
+   <li><b>시험 전날</b> 문제 풀기 탭으로 전체 2회독 후 틀린 것만 반복.</li>
+  </ul>
+
+  <div class="note"><b>출처.</b> 한전 NDIS데이터관리원 필기는 자체출제 비공개 시험이라 공개된 기출문제가 없습니다.
+  이 문항들은 공고에 명시된 출제범위, 필수자격이 가리키는 난이도(기능사~산업기사), 붙임5 직무설명자료를 근거로
+  작성한 <b>예상문제</b>입니다. 실제 시험지의 재현이 아니라 범위 점검용으로 쓰세요.<br><br>
+  <b>확인 필요.</b> 현직 사장 성명, 당해 연도 경영 비전·슬로건, 지역별 차등 전기요금제·해외 원전 사업의 최신 진행
+  상황은 바뀌는 정보라 확정적으로 넣지 않았습니다. 한전 홈페이지에서 직접 확인하세요.</div>
+ </div>
+
+ <footer>
+  <span>KEPCO NDIS 필기 대비 · 111문항</span>
+  <span id="upd"></span>
+ </footer>
+</div></div>
+
+<script>
+(function(){
+  var exam = new Date(2026,7,20,9,0,0); // 2026-08-20
+  var now = new Date();
+  var d = Math.ceil((exam - new Date(now.getFullYear(),now.getMonth(),now.getDate()))/86400000);
+  var el = document.getElementById('dd');
+  if(d > 0){ el.innerHTML = '<span>D-</span>' + d; }
+  else if(d === 0){ el.innerHTML = '<span>TODAY</span>D-DAY'; el.style.fontSize='22px'; }
+  else { el.innerHTML = '<span>시험 종료</span>—'; el.style.fontSize='22px'; }
+  document.getElementById('upd').textContent = '시험일 2026. 8. 20 (목)';
+})();
+</script>
+</html>
