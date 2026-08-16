@@ -1,71 +1,136 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>한전 NDIS 필기 대비 · 정답 및 상세해설</title>
+<meta name="theme-color" content="#FBFBFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171B" media="(prefers-color-scheme: dark)">
 <style>
-:root{--ink:#08141C;--panel:#0E212D;--line:#1C4459;--line2:#123141;--cy:#4FD1E8;
---cy-dim:#2C8FA6;--amber:#F2B441;--ok:#5FD39A;--tx:#DCEAF0;--tx-dim:#7EA0B0;
---mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
---sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif}
-*{box-sizing:border-box}
-body{margin:0;background:var(--ink);color:var(--tx);font-family:var(--sans);line-height:1.66;
-background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);
-background-size:28px 28px;background-position:-1px -1px}
-.sheet{max-width:880px;margin:0 auto;padding:14px}
-.frame{border:1px solid var(--line);background:rgba(8,20,28,.95);position:relative}
-.frame::before,.frame::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--cy-dim)}
-.frame::before{top:6px;left:6px;border-right:0;border-bottom:0}
-.frame::after{bottom:6px;right:6px;border-left:0;border-top:0}
-.tb{padding:18px 16px 14px;border-bottom:1px solid var(--line)}
-.eyebrow{font:600 11px/1.4 var(--mono);letter-spacing:.22em;color:var(--cy-dim)}
-h1{margin:6px 0 3px;font-size:21px;letter-spacing:-.02em}
-.sub{font:500 12px/1.5 var(--mono);color:var(--tx-dim)}
-.specs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-.specs div{padding:9px 10px;border-right:1px solid var(--line2);font:500 11px/1.5 var(--mono);color:var(--tx-dim)}
-.specs div:last-child{border-right:0}
-.specs b{display:block;font:700 14px/1.4 var(--sans);color:var(--tx)}
-.toc{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px}
-.toc a{border:1px solid var(--line);color:var(--cy);text-decoration:none;padding:7px 12px;
-font:600 12px var(--sans);border-radius:2px}
-.toc a:hover{background:rgba(79,209,232,.10)}
-.pad{padding:16px}
-.sec{margin:30px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.sec:first-of-type{margin-top:0}
-.sec h2{margin:0;font-size:16px;color:var(--cy);letter-spacing:-.01em}
-.sec p{margin:5px 0 0;font-size:12.5px;color:var(--tx-dim)}
-.sec .cnt{float:right;font:700 12px var(--mono);color:var(--amber)}
-.item{border:1px solid var(--line2);border-left:2px solid var(--line);padding:14px 16px;
-margin-bottom:12px;background:var(--panel)}
-.hd{font:700 10.5px var(--mono);letter-spacing:.13em;color:var(--cy-dim);margin-bottom:6px}
-.q{font-size:15px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
-ol{margin:0;padding-left:0;list-style:none;counter-reset:o}
-ol li{counter-increment:o;font-size:13.8px;padding:3px 0 3px 26px;position:relative;color:var(--tx-dim)}
-ol li::before{content:counter(o);position:absolute;left:0;top:3px;font:700 11px var(--mono);color:var(--cy-dim)}
-ol li.ok{color:var(--tx);font-weight:600}
-ol li.ok::before{color:var(--ok)}
-ol li.ok::after{content:"◀ 정답";font:700 10px var(--mono);color:var(--ok);margin-left:9px;letter-spacing:.08em}
-.key{border-left:2px solid var(--ok);background:rgba(95,211,154,.07);padding:8px 12px;margin-top:11px;
-font-size:13.3px;color:#CFEEDD}
-.key b{color:var(--ok)}
-.deep{border:1px solid var(--line2);border-top:2px solid var(--amber);padding:12px 14px;margin-top:9px;
-background:rgba(242,180,65,.045);font-size:13.6px;color:#E7DCC4}
-.deep b{color:var(--amber)}
-.deep .lab{display:block;font:700 10px var(--mono);letter-spacing:.16em;color:var(--amber);margin-bottom:7px}
-code{font:600 12.5px var(--mono);background:rgba(79,209,232,.12);padding:1px 5px;color:var(--cy);border-radius:2px}
-.note{font-size:12.5px;color:var(--tx-dim);border:1px dashed var(--line);padding:12px 14px;margin:18px 0 4px}
-@media print{
- body{background:#fff;color:#111}
- .frame{border-color:#999}.frame::before,.frame::after{display:none}
- .item{background:#fff;border-color:#ccc;page-break-inside:avoid}
- .sec h2,.eyebrow,.hd,ol li::before{color:#333}
- .key{background:#eef7f1;color:#1a3b2a;border-left-color:#2c7a52}
- .key b{color:#1a6b42}
- .deep{background:#faf6ec;color:#2a2418;border-color:#ddd;border-top-color:#b8891f}
- .deep b,.deep .lab{color:#8a6413}
- code{background:#eef2f5;color:#234}
- .toc{display:none}
- h1,.sub,.specs b,ol li{color:#111}
- ol li.ok{color:#111}ol li.ok::after{color:#1a7a4c}
+:root{
+ --bg:#FBFBFA; --surface:#FFFFFF; --tx:#191C20; --tx-dim:#59616F;
+ --line:#E4E7EB; --line-soft:#F0F2F5;
+ --accent:#1A56DB; --accent-bg:#F1F5FE;
+ --ok:#12764A; --ok-bg:#EDF8F2;
+ --red:#BE3A2E; --red-bg:#FDF2F1;
+ --warn:#8A5A00; --warn-bg:#FFF8EC;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
 }
-@media(max-width:560px){.specs{grid-template-columns:repeat(2,1fr)}h1{font-size:18px}.pad{padding:12px}}
+@media(prefers-color-scheme:dark){
+ :root{
+  --bg:#15171B; --surface:#1C1F25; --tx:#E9ECF1; --tx-dim:#9AA3B1;
+  --line:#2C3038; --line-soft:#23262C;
+  --accent:#82ABFF; --accent-bg:#1A2233;
+  --ok:#4ECB8E; --ok-bg:#152720;
+  --red:#F0837A; --red-bg:#2A1B19;
+  --warn:#E2B064; --warn-bg:#272014;
+ }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sans);
+ font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;
+ text-rendering:optimizeLegibility}
+.frame{display:block}
+
+/* ── 헤더 ───────────────────────────── */
+.tb{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+ padding-bottom:22px;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 11px/1 var(--mono);letter-spacing:.14em;color:var(--accent)}
+h1{margin:13px 0 7px;font-size:27px;line-height:1.32;letter-spacing:-.022em;font-weight:700}
+.sub{font-size:14px;line-height:1.6;color:var(--tx-dim)}
+.dday{flex:none;text-align:right;font:700 40px/1 var(--mono);
+ color:var(--accent);letter-spacing:-.02em}
+.dday span{display:block;margin-bottom:7px;font:600 10px/1 var(--mono);
+ letter-spacing:.16em;color:var(--tx-dim)}
+
+/* ── 시험정보 스트립 ─────────────────── */
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.specs div{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+ padding:13px 14px;font-size:12px;line-height:1.55;color:var(--tx-dim)}
+.specs b{display:block;margin:4px 0 3px;font-size:16px;line-height:1.35;
+ color:var(--tx);font-weight:700;letter-spacing:-.015em}
+
+/* ── 공통 요소 ──────────────────────── */
+code{font:600 13px var(--mono);background:var(--accent-bg);color:var(--accent);
+ padding:2px 6px;border-radius:5px}
+.note{margin-top:26px;padding:16px 18px;background:var(--warn-bg);
+ border-left:3px solid var(--warn);border-radius:0 10px 10px 0;
+ font-size:13.5px;line-height:1.75;color:var(--tx-dim)}
+.note b{color:var(--tx);font-weight:700}
+
+/* ── 정답 및 해설 ───────────────────── */
+.sheet{max-width:800px;margin:0 auto;padding:34px 20px 60px}
+.pad{padding:0}
+/* 이 페이지는 D-day 블록이 없어 헤더를 단순 세로 배치로 되돌린다 */
+.tb{display:block}
+
+.toc{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.toc a{background:var(--surface);border:1px solid var(--line);border-radius:999px;
+ color:var(--tx);text-decoration:none;padding:9px 17px;
+ font-size:13.5px;font-weight:600;transition:.14s}
+.toc a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+
+.sec{margin:46px 0 18px;padding-bottom:12px;border-bottom:2px solid var(--line)}
+.sec:first-of-type{margin-top:32px}
+.sec h2{margin:0;font-size:21px;font-weight:700;letter-spacing:-.02em;color:var(--tx)}
+.sec p{margin:8px 0 0;font-size:14px;line-height:1.7;color:var(--tx-dim)}
+.sec .cnt{float:right;margin-left:14px;font:700 13px var(--mono);color:var(--accent)}
+
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+ padding:23px 22px 21px;margin-bottom:16px}
+.hd{font:700 11px/1 var(--mono);letter-spacing:.14em;color:var(--tx-dim);margin-bottom:11px}
+.q{font-size:17px;line-height:1.62;font-weight:600;letter-spacing:-.015em;
+ margin-bottom:15px;color:var(--tx)}
+
+ol{margin:0;padding-left:0;list-style:none;counter-reset:o}
+ol li{counter-increment:o;position:relative;padding:6px 0 6px 32px;
+ font-size:15px;line-height:1.65;color:var(--tx-dim)}
+ol li::before{content:counter(o);position:absolute;left:0;top:7px;
+ width:22px;height:22px;border-radius:50%;background:var(--line-soft);
+ display:flex;align-items:center;justify-content:center;
+ font:700 11.5px var(--mono);color:var(--tx-dim)}
+ol li.ok{color:var(--tx);font-weight:700}
+ol li.ok::before{background:var(--ok);color:var(--surface)}
+ol li.ok::after{content:"정답";margin-left:10px;padding:2px 8px;border-radius:5px;
+ background:var(--ok-bg);color:var(--ok);font:700 11px var(--sans);
+ letter-spacing:.02em;white-space:nowrap}
+
+.key{margin-top:16px;padding:14px 16px;background:var(--ok-bg);
+ border-left:3px solid var(--ok);border-radius:0 10px 10px 0;
+ font-size:14.5px;line-height:1.72;color:var(--tx)}
+.key b{color:var(--tx);font-weight:700}
+.key>b:first-child{color:var(--ok)}
+
+.deep{margin-top:11px;padding:17px 18px;background:var(--bg);
+ border:1px solid var(--line);border-radius:12px;
+ font-size:14.5px;line-height:1.8;color:var(--tx-dim)}
+.deep b{color:var(--tx);font-weight:700}
+.deep .lab{display:block;margin-bottom:11px;font:700 10.5px/1 var(--mono);
+ letter-spacing:.16em;color:var(--accent)}
+
+@media(max-width:600px){
+ .sheet{padding:24px 16px 48px}
+ .tb{gap:14px}
+ h1{font-size:21px}
+ .specs{grid-template-columns:1fr 1fr}
+ .item{padding:19px 16px 17px}
+ .q{font-size:16.5px}
+ .sec h2{font-size:19px}
+}
+
+/* ── 인쇄 ───────────────────────────── */
+@media print{
+ :root{
+  --bg:#fff; --surface:#fff; --tx:#111; --tx-dim:#333;
+  --line:#ccc; --line-soft:#eee;
+  --accent:#1a3a6b; --accent-bg:#f3f6fa;
+  --ok:#14663f; --ok-bg:#f1f7f4;
+  --warn:#7a5000; --warn-bg:#fdf8ee;
+ }
+ body{background:#fff;font-size:11pt}
+ .sheet{max-width:none;padding:0}
+ .toc{display:none}
+ .item{page-break-inside:avoid;box-shadow:none}
+ .sec{page-break-after:avoid}
+ .deep{background:#fafafa}
+}
 </style>
 <div class="sheet"><div class="frame">
 <div class="tb">
